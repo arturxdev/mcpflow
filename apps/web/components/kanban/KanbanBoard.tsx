@@ -84,7 +84,7 @@ export function KanbanBoard({ boardId, boardName }: KanbanBoardProps) {
         </div>
         <DragOverlay>
           {activeTask ? (
-            <Card task={activeTask} onDelete={() => { }} />
+            <Card task={activeTask} boardId={boardId} onDelete={() => { }} />
           ) : null}
         </DragOverlay>
       </DndContext>

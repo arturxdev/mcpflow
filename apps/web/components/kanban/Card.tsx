@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useDraggable } from '@dnd-kit/core'
 import { Task } from '@repo/core'
 import { PriorityBadge } from './PriorityBadge'
@@ -7,10 +8,11 @@ import { PRBadge } from './PRBadge'
 
 interface CardProps {
   task: Task
+  boardId: string
   onDelete: (taskId: string) => void
 }
 
-export function Card({ task, onDelete }: CardProps) {
+export function Card({ task, boardId, onDelete }: CardProps) {
   const { attributes, listeners, setNodeRef, transform, isDragging } =
     useDraggable({
       id: task.id,
@@ -44,7 +46,14 @@ export function Card({ task, onDelete }: CardProps) {
       }}
     >
       <div className="flex items-start justify-between gap-2 mb-2">
-        <h4 className="font-medium text-sm text-white flex-1">{task.title}</h4>
+        <Link
+          href={`/boards/${boardId}/tasks/${task.id}`}
+          onClick={(e) => e.stopPropagation()}
+          onPointerDown={(e) => e.stopPropagation()}
+          className="font-medium text-sm text-white flex-1 hover:text-indigo-400 transition-colors"
+        >
+          {task.title}
+        </Link>
         <button
           onClick={(e) => {
             e.stopPropagation()

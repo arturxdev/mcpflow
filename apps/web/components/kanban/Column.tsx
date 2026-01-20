@@ -50,7 +50,7 @@ export function Column({
         `}
       >
         {tasks.map((task) => (
-          <Card key={task.id} task={task} onDelete={onDeleteTask} />
+          <Card key={task.id} task={task} boardId={boardId} onDelete={onDeleteTask} />
         ))}
         {id === 'todo' && (
           <Link

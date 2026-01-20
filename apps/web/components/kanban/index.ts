@@ -9,5 +9,6 @@ export type { Task, Board, Priority, Status } from '@repo/core'
 
 // Task form components
 export { TaskForm } from './tasks/TaskForm'
+export { TaskEditForm } from './tasks/TaskEditForm'
 export { MarkdownEditor } from './tasks/MarkdownEditor'
 export { PrioritySelect } from './tasks/PrioritySelect'
