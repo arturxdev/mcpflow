@@ -6,7 +6,7 @@ import { useKanban } from './hooks/useKanban'
 import { Column } from './Column'
 import { Card } from './Card'
 import { COLUMNS } from './constants'
-import { Status, Task } from '@kanban/types'
+import { Status, Task } from '@repo/core'
 
 interface KanbanBoardProps {
   boardId: string

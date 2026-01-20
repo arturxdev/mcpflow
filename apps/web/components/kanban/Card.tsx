@@ -1,7 +1,7 @@
 'use client'
 
 import { useDraggable } from '@dnd-kit/core'
-import { Task } from '@kanban/types'
+import { Task } from '@repo/core'
 import { PriorityBadge } from './PriorityBadge'
 import { PRBadge } from './PRBadge'
 

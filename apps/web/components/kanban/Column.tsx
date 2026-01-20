@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useDroppable } from '@dnd-kit/core'
-import { Task, Status } from '@kanban/types'
+import { Task, Status } from '@repo/core'
 import { Card } from './Card'
 
 interface ColumnProps {
@@ -28,7 +28,7 @@ export function Column({
 
   return (
     <div
-      className="flex flex-col rounded-xl w-[350px] min-w-[350px]"
+      className="flex flex-col rounded-xl w-1/3"
       style={{
         backgroundColor: '#16161e',
         border: '1px solid rgba(255,255,255,0.03)',

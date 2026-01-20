@@ -2,12 +2,12 @@
 
 export function Navigation() {
   return (
-    <nav className="fixed left-0 right-0 top-0 z-[100] flex items-center justify-between px-16 py-6 backdrop-blur-[10px]" style={{
+    <nav className="w-4/5 mx-auto fixed left-0 right-0 top-0 z-[100] flex items-center justify-between px-16 py-6 backdrop-blur-[10px]" style={{
       background: 'linear-gradient(to bottom, var(--bg-primary) 0%, transparent 100%)'
     }}>
       {/* Logo */}
-      <div className="text-[1.75rem] font-normal tracking-[-0.02em]" style={{ fontFamily: 'var(--font-instrument-serif)' }}>
-        Zen<span className="text-[var(--accent-indigo)]">Board</span>
+      <div className="text-[1.75rem] italic font-bold tracking-[-0.02em]" style={{ fontFamily: 'var(--font-instrument-serif)' }}>
+        MCP<span className="italic text-[var(--accent-indigo)]">Flow</span>
       </div>
 
       {/* Navigation Links */}
@@ -32,7 +32,7 @@ export function Navigation() {
         </a>
         <a
           href="/boards"
-          className="rounded-lg bg-[var(--accent-indigo)] px-6 py-3 text-[0.9rem] font-medium text-[var(--bg-primary)] transition-all duration-200 hover:-translate-y-0.5"
+          className="rounded-lg bg-[var(--accent-indigo)] px-6 py-3 text-[0.9rem] font-medium text-white transition-all duration-200 hover:-translate-y-0.5"
           style={{
             boxShadow: '0 0 30px var(--accent-indigo-glow)'
           }}

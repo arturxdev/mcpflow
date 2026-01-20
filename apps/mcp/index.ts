@@ -1,9 +1,8 @@
-#!/usr/bin/env node
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
 import { createMcpExpressApp } from '@modelcontextprotocol/sdk/server/express.js';
-import { boardService } from '@kanban/services'
-import { taskService } from '@kanban/services'
+import { boardService } from '@repo/core'
+import { taskService } from '@repo/core'
 import { z } from "zod";
 import type { Request, Response } from 'express';
 

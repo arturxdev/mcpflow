@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { Task, Status, Priority } from '@kanban/types'
+import { Task, Status, Priority } from '@repo/core'
 
 interface UseKanbanOptions {
   boardId: string

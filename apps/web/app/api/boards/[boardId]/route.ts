@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { boardService } from '@kanban/services'
+import { boardService } from '@repo/core'
 import { auth } from '@clerk/nextjs/server';
 
 export async function GET(

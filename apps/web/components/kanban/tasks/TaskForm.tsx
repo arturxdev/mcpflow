@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Priority } from '@kanban/types'
+import { Priority } from '@repo/core'
 import { MarkdownEditor } from './MarkdownEditor'
 import { PrioritySelect } from './PrioritySelect'
 

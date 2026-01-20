@@ -1,4 +1,4 @@
-import { Status } from '@kanban/types'
+import { Status } from '@repo/core'
 
 export const COLUMNS: { id: Status; title: string; dotColor: string }[] = [
   { id: 'todo', title: 'To Do', dotColor: 'bg-red-500' },

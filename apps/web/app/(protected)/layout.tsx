@@ -12,9 +12,10 @@ export default function ProtectedLayout({
         style={{ borderColor: 'rgba(255,255,255,0.05)' }}
       >
         <nav className="flex items-center justify-between max-w-7xl mx-auto">
-          <a href="/boards" className="text-xl font-bold text-white">
-            ZenBoard
+          <a href="/boards" className="text-[1.75rem] italic font-bold tracking-[-0.02em]" style={{ fontFamily: 'var(--font-instrument-serif)' }}>
+            MCP<span className="italic text-[var(--accent-indigo)]">Flow</span>
           </a>
+
           <UserButton />
         </nav>
       </header>

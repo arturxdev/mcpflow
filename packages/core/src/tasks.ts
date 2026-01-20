@@ -1,5 +1,5 @@
-import { CreateTask, Task } from "@kanban/types";
-import { db, tasks } from "@kanban/db";
+import { CreateTask, Task } from "./entities";
+import { db, tasks } from "./db";
 import { eq, and, max } from "drizzle-orm";
 import { ulid } from "ulid";
 

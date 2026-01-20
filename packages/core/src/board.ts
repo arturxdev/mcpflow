@@ -1,5 +1,5 @@
-import { db, boards } from "@kanban/db";
-import { Board } from "@kanban/types";
+import { db, boards } from "./db";
+import { Board } from "./entities";
 import { eq } from "drizzle-orm";
 import { ulid } from "ulid";
 

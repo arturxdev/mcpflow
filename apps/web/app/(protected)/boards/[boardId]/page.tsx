@@ -3,7 +3,7 @@
 import { useState, useEffect, use } from 'react'
 import Link from 'next/link'
 import { KanbanBoard } from '@/components/kanban'
-import { Board } from '@kanban/types'
+import { Board } from '@repo/core'
 
 interface BoardPageProps {
   params: Promise<{ boardId: string }>

@@ -1,4 +1,4 @@
-import { Priority } from '@kanban/types'
+import { Priority } from '@repo/core'
 import { PRIORITY_STYLES } from './constants'
 
 interface PriorityBadgeProps {

@@ -15,6 +15,7 @@ const db = drizzle(sql);
 // Pre-generated ULIDs for seed data
 const BOARD_1_ID = '01JCZXYZ3NDEKTSV4RRFFQ69G';
 const BOARD_2_ID = '01JCZXYZ4ABCTSV4RRFFQ69G5';
+const USER_1_ID = '01JCZXYZ5CDEKTSV4RRFFQ69G6';
 
 async function seed() {
   console.log('🌱 Seeding database...');
@@ -23,17 +24,20 @@ async function seed() {
   await db.delete(tasks);
   await db.delete(boards);
 
+
   // Insert boards
   await db.insert(boards).values([
     {
       id: BOARD_1_ID,
       name: 'Project Alpha',
       description: 'Main development board',
+      userId: USER_1_ID,
     },
     {
       id: BOARD_2_ID,
       name: 'Marketing Campaign',
       description: 'Q1 marketing tasks',
+      userId: USER_1_ID,
     },
   ]);
 
@@ -49,6 +53,7 @@ async function seed() {
       status: 'done',
       boardId: BOARD_1_ID,
       pr: 1,
+      userId: USER_1_ID,
     },
     {
       id: ulid(),
@@ -58,6 +63,7 @@ async function seed() {
       status: 'doing',
       boardId: BOARD_1_ID,
       pr: 2,
+      userId: USER_1_ID,
     },
     {
       id: ulid(),
@@ -67,6 +73,7 @@ async function seed() {
       status: 'todo',
       boardId: BOARD_1_ID,
       pr: 3,
+      userId: USER_1_ID,
     },
     {
       id: ulid(),
@@ -76,6 +83,7 @@ async function seed() {
       status: 'todo',
       boardId: BOARD_1_ID,
       pr: 4,
+      userId: USER_1_ID,
     },
     {
       id: ulid(),
@@ -85,6 +93,7 @@ async function seed() {
       status: 'doing',
       boardId: BOARD_2_ID,
       pr: 1,
+      userId: USER_1_ID,
     },
   ]);
 

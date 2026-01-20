@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Board } from '@kanban/types'
+import { Board } from '@repo/core'
 import { useAuth } from '@clerk/nextjs'
 
 
@@ -99,7 +99,7 @@ export default function BoardsPage() {
         <button
           type="submit"
           disabled={isCreating || !newBoardName.trim()}
-          className="px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-4 py-2 rounded-lg bg-indigo-500 text-white hover:bg-indigo-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isCreating ? 'Creating...' : 'Create Board'}
         </button>

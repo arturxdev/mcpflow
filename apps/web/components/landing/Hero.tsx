@@ -42,12 +42,12 @@ export function Hero() {
             opacity: 0
           }}
         >
-          Gestiona tus proyectos con <em className="italic text-[var(--accent-indigo)]">claridad zen</em>
+          Gestiona tus proyectos con <em className="italic text-indigo-400">claridad zen</em>
         </h1>
 
         {/* Subtitle */}
         <p
-          className="mb-12 max-w-[600px] text-[1.25rem] text-[var(--text-secondary)]"
+          className="mb-12 mx-auto max-w-[600px] text-[1.25rem] text-[var(--text-secondary)]"
           style={{
             animation: 'fadeInUp 0.8s ease 0.2s forwards',
             opacity: 0
@@ -65,8 +65,8 @@ export function Hero() {
           }}
         >
           <a
-            href="/dashboard"
-            className="rounded-lg bg-[var(--accent-indigo)] px-6 py-3 text-[0.9rem] font-medium text-[var(--bg-primary)] transition-all duration-200 hover:-translate-y-0.5"
+            href="/boards"
+            className="rounded-lg bg-indigo-400 px-6 py-3 text-[0.9rem] font-medium text-white transition-all duration-200 hover:-translate-y-0.5"
             style={{
               boxShadow: '0 0 30px var(--accent-indigo-glow)'
             }}
