@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Board } from '@repo/core'
 import { useAuth } from '@clerk/nextjs'
+import { ChevronRight, X } from 'lucide-react'
 
 
 export default function BoardsPage() {
@@ -81,9 +82,8 @@ export default function BoardsPage() {
   return (
     <div>
       <div className="flex items-center justify-between mb-8">
-        <h1 className="text-2xl font-bold text-white">Your Boards</h1>
+        <h1 className="text-4xl italic font-bold text-white">Your Boards</h1>
       </div>
-
       <form onSubmit={handleCreateBoard} className="mb-8 flex gap-3">
         <input
           type="text"
@@ -124,7 +124,7 @@ export default function BoardsPage() {
             <div className="flex items-start justify-between mb-2">
               <Link
                 href={`/boards/${board.id}`}
-                className="text-lg font-semibold text-white hover:text-blue-400 transition-colors"
+                className="text-lg font-semibold text-white hover:text-indigo-300 transition-colors"
               >
                 {board.name}
               </Link>
@@ -133,7 +133,7 @@ export default function BoardsPage() {
                 className="text-gray-500 hover:text-red-400 transition-colors"
                 title="Delete board"
               >
-                ×
+                <X />
               </button>
             </div>
             {board.description && (
@@ -141,9 +141,9 @@ export default function BoardsPage() {
             )}
             <Link
               href={`/boards/${board.id}`}
-              className="mt-4 inline-block text-sm text-indigo-400 hover:text-indigo-300 transition-colors"
+              className="mt-4 inline-flex items-center text-sm text-indigo-400 hover:text-indigo-300 transition-colors"
             >
-              Open board →
+              Open board <ChevronRight />
             </Link>
           </div>
         ))}

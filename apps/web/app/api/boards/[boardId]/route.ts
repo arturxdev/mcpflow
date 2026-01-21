@@ -11,7 +11,8 @@ export async function GET(
     return new NextResponse("No autorizado", { status: 401 });
   }
   const { boardId } = await params
-  const board = boardService.getById(boardId)
+  const board = await boardService.getById(boardId)
+  console.log('Board data:', board)
 
   if (!board) {
     return NextResponse.json({ error: 'Board not found' }, { status: 404 })
@@ -29,14 +30,14 @@ export async function DELETE(
     return new NextResponse("No autorizado", { status: 401 });
   }
   const { boardId } = await params
-  const board = boardService.getById(boardId)
+  const board = await boardService.getById(boardId)
 
   if (!board) {
     return NextResponse.json({ error: 'Board not found' }, { status: 404 })
   }
 
   // Remove board and its tasks
-  boardService.delete(boardId)
+  await boardService.delete(boardId)
 
   return NextResponse.json({ success: true })
 }

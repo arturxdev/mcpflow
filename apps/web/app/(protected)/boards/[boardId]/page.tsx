@@ -4,6 +4,7 @@ import { useState, useEffect, use } from 'react'
 import Link from 'next/link'
 import { KanbanBoard } from '@/components/kanban'
 import { Board } from '@repo/core'
+import { ChevronLeft, MoveLeft } from 'lucide-react'
 
 interface BoardPageProps {
   params: Promise<{ boardId: string }>
@@ -59,11 +60,13 @@ export default function BoardPage({ params }: BoardPageProps) {
   return (
     <div>
       <div className="mb-6">
+
         <Link
           href="/boards"
-          className="text-sm text-gray-400 hover:text-white transition-colors"
+          className="text-sm flex text-gray-400 hover:text-white transition-colors"
         >
-          ← Back to boards
+          <span><ChevronLeft /></span>
+          <span className='content-center'>Back to boards</span>
         </Link>
       </div>
       <KanbanBoard boardId={boardId} boardName={board.name} />

@@ -66,7 +66,7 @@ export function KanbanBoard({ boardId, boardName }: KanbanBoardProps) {
   return (
     <div className="h-full">
       {boardName && (
-        <h1 className="text-2xl font-bold text-white mb-6">{boardName}</h1>
+        <h1 className="text-4xl italic font-bold text-white mb-6">{boardName}</h1>
       )}
       <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
         <div className="flex gap-6 overflow-x-auto pb-4 overflow-x-auto">
